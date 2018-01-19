@@ -1,0 +1,40 @@
+node count of conlict graph: 16
+
+Temp Node: %eax
+conflict nodes: 
+Temp Node: %ebx
+conflict nodes: 
+Temp Node: %ecx
+conflict nodes: 
+Temp Node: %edx
+conflict nodes: 
+Temp Node: %esi
+conflict nodes: 
+Temp Node: %edi
+conflict nodes: 
+Temp Node: 111
+conflict nodes: 
+Temp Node: 110
+conflict nodes: 
+Temp Node: 100
+conflict nodes: 113, 112, 
+Temp Node: 112
+conflict nodes: 100, 
+Temp Node: 113
+conflict nodes: 100, 
+Temp Node: 101
+conflict nodes: 114, %ecx, %edx, %eax, 115, 
+Temp Node: 115
+conflict nodes: 101, 
+Temp Node: 114
+conflict nodes: 101, 
+Temp Node: 117
+conflict nodes: 
+Temp Node: 116
+conflict nodes: 
+=====================================================moveList
+%eax ---> 116
+%eax ---> 114
+100 ---> 101
+110 ---> 100
+%eax ---> 110

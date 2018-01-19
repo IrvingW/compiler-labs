@@ -1,0 +1,5 @@
+in this lab, I do not just modify the file semant.c.
+I also write something new into tiger.y to fuck the test
+env.c
+Ty_Int() in the types.c
+types.h Ty_ty_

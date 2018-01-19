@@ -1,0 +1,6 @@
+before I wrote this lab, I merge the modification in lab4 that I did.
+Including Ty_Int() in types.c and initialization of the kind of E_eventry in env.c (it's intresting that this file changed in this lab)
+I also copy the old semant.c from lab4 and modified it to adopt this new lab.
+To identify a loop variable, I modify the structure of Ty_Ty_, too
+
+OK, previews is done. Let't go back to work!

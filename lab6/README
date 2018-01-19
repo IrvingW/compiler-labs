@@ -1,0 +1,67 @@
+update log:
+    12.26: 
+        ADD
+        Temp_tempList Temp_Union_tempList(Temp_tempList l, Temp_tempList r);
+        Temp_tempList Temp_Sub_tempList(Temp_tempList l, Temp_tempList r);
+        bool Temp_Equal_tempList(Temp_tempList l, Temp_tempList r);
+        bool Temp_In_tempList(Temp_temp t, Temp_tempList list);
+        Temp_tempList Temp_Replace_tempList(Temp_tempList list, Temp_temp old, Temp_temp new);
+        
+        into temp.c
+
+        ADD
+        Live_moveList Live_Union_moveList(Live_moveList l, Live_moveList r);
+        Live_moveList Live_Sub_moveList(Live_moveList l, Live_moveList r);
+        Live_moveList Live_Intersect_moveList(Live_moveList l, Live_moveList r);
+        bool Live_In_moveList(G_node src, G_node dst, Live_moveList list);
+        Temp_tempList Precolored_regs();
+
+        get_Gnode
+        cell_of_bitmap
+        link
+
+        into liveness.c
+
+        COMPLETE
+        struct Live_graph Live_liveness(G_graph flow)
+        in liveness.c
+
+    ====================================================================================================
+
+    12.27:
+        ADD 
+        Build()
+        NodeMoves()
+        MoveRelated()
+        MakeWorklist()
+        
+        into regalloc.c
+		
+		ADD
+		G_Union_nodeList
+		G_Sub_nodeList
+		G_Inter_nodeList
+		G_In_nodeList
+
+		into graph.c
+
+		
+		MODIFY
+		Temp_temp_
+		in temp.c
+
+		ADD
+		F_spill 
+		into x86frame.c
+
+		ADD 
+		F_tempMap, F_SP
+		into frame.h, x86frame.c
+============================================================================================
+	12.28
+		感觉F_procEntryExit2()没有必要实现，因为我寄存器分配根本就没有用2个特殊用途的寄存器，FP，SP
+		除此以外，procEntryExit1()有必要实现一下，主要是将callesave保存到栈中，函数结束的时候再mov回来。还有F_procEntryExit3(),生成过程入口处理和出口处理的汇编代码。
+
+		做了很多修改，填上了之前在codegen里没写完的东西，主要是call指令生成出来的地方还有点不清楚
+		Temp_temp的	spilled那个属性回头要记得去掉
+		frame模块里新加了一个返回callersave()的函数

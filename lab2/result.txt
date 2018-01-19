@@ -1,0 +1,11 @@
+       LET    2
+       VAR    8
+        ID   12 a
+    ASSIGN   14
+    LPAREN   17
+    RPAREN   18
+        IN   20
+        ID   24 a
+      PLUS   26
+       INT   28 3
+       END   30

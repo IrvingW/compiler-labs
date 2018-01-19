@@ -1,0 +1,4 @@
+./testcases/test2.tig:6.2: here comes a type dec
+./testcases/test2.tig:6.2: nameTy_cnt is 1
+./testcases/test2.tig:7.1: here comes a var dec
+./testcases/test2.tig:7.1: here comes a array exp

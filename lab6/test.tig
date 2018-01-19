@@ -1,0 +1,11 @@
+let
+	type intArray = array of int
+	var a :=  intArray [N] of 0
+	function add(i:int)=
+		var r := 5;
+		a[i] := r;
+in 
+	add(0);
+	printi(a[i])
+end
+
